@@ -5,19 +5,18 @@ Prima di partire a scrivere codice poniamoci qualche domanda:
 Che ci sia un array da qualche parte?
 Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
 
-
-let computerNumber = Math.floor(Math.random() * 6) + 1;
 let button = document.querySelector (".btn");
-let availableNumber = [1, 2, 3, 4, 5, 6];
-console.log(availableNumber);
-console.log(computerNumber);
+
 button.addEventListener("click", function(){
-   
-    let playerNumber = document.getElementById("userValue").value;
+    let computerNumber = [Math.floor(Math.random() * 6) + 1];
+    let playerNumber = [Math.floor(Math.random() * 6) + 1];
+    let availableNumber = [1, 2, 3, 4, 5, 6];
+    console.log(availableNumber);
+    console.log(computerNumber);
+    console.log(playerNumber);
     for (i = 0; i < availableNumber.length; i++){
-       
         let box = document.getElementById("notification");  
-        if (playerNumber < computerNumber){
+        if (playerNumber > computerNumber){
         notification.innerHTML="Hai vinto!";
         box.classList.remove("d-none");
         box.style.color="green";
@@ -31,4 +30,6 @@ button.addEventListener("click", function(){
             box.classList.remove("d-none");
             box.style.color="red";
     } 
+    
 })
+    
