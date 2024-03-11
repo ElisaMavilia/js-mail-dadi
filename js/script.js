@@ -13,7 +13,6 @@ Consigli del giorno:
 */
 
 let button = document.querySelector(".btn");
-let userEmail = document.getElementById("userValue").value;
 
 button.addEventListener("click", function(){
     let email =[
@@ -28,15 +27,16 @@ button.addEventListener("click", function(){
         "lara@gmail.se",
         "sanna@gmail.com"
         ];
-        
-  /*   let access = false; */
+
+let userEmail = document.getElementById("userValue").value;
+  let access = false;
     for (let i = 0; i < email.length; i++){
         if(userEmail.toLowerCase() === email[i].toLowerCase()){
             access = true;
         };
     }
 let notification = document.getElementById("notification");  
-   if (userEmail = email){
+   if (access) {
     notification.innerHTML="Benvenuto";
    } else {
     notification.innerHTML="Accesso negato";
