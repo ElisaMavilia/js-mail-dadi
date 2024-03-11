@@ -13,6 +13,8 @@ Consigli del giorno:
 */
 
 let button = document.querySelector(".btn");
+let resetBtn =document.getElementById("resetbtn");
+
 
 button.addEventListener("click", function(){
     let email =[
