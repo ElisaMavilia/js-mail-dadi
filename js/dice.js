@@ -30,6 +30,5 @@ button.addEventListener("click", function(){
             box.classList.remove("d-none");
             box.style.color="red";
     } 
-    
 })
     
