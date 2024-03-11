@@ -35,12 +35,16 @@ let userEmail = document.getElementById("userValue").value;
             access = true;
         };
     }
-let notification = document.getElementById("notification");  
+let box = document.getElementById("notification");  
    if (access) {
     notification.innerHTML="Benvenuto";
+    box.classList.remove("d-none");
    } else {
     notification.innerHTML="Accesso negato";
+    box.classList.remove("d-none");
+   box.style.backgroundColor="red";
    }
+
 })
     
 
