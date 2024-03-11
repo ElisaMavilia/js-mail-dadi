@@ -37,12 +37,13 @@ let userEmail = document.getElementById("userValue").value;
     }
 let box = document.getElementById("notification");  
    if (access) {
-    notification.innerHTML="Benvenuto";
+    notification.innerHTML="Benvenuto!";
     box.classList.remove("d-none");
+    box.style.color="green";
    } else {
-    notification.innerHTML="Accesso negato";
+    notification.innerHTML="Accesso negato!";
     box.classList.remove("d-none");
-   box.style.backgroundColor="red";
+    box.style.color="red";
    }
 
 })
