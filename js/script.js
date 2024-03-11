@@ -12,14 +12,6 @@ Consigli del giorno:
 
 */
 
-//Creo variabile e assegno array
-
-
-
-
-
-
-//
 let button = document.querySelector(".btn");
 let userEmail = document.getElementById("userValue").value;
 
@@ -37,16 +29,19 @@ button.addEventListener("click", function(){
         "sanna@gmail.com"
         ];
         
-    let access = false;
+  /*   let access = false; */
     for (let i = 0; i < email.length; i++){
         if(userEmail.toLowerCase() === email[i].toLowerCase()){
             access = true;
         };
-
     }
 let notification = document.getElementById("notification");  
-    return access ? notification.innerHTML = "Access Denied" : notification.innerHTML = "Welcome";
+   if (userEmail = email){
+    notification.innerHTML="Benvenuto";
+   } else {
+    notification.innerHTML="Accesso negato";
+   }
 })
     
-  
+
 
